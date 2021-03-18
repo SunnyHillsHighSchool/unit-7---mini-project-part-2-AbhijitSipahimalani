@@ -32,3 +32,13 @@ public class ComputingStatistics {
       return amount;
    }
 }
+    public double smallestAmount {
+      double amount = null 
+      for(i > 0; i < data.size(); i++;) {
+        if index[i] > amount{
+          int amount = index[i];
+        }
+      }
+    return amount;    
+    }
+    public string smallestLoanCountry
