@@ -32,13 +32,96 @@ public class ComputingStatistics {
       return amount;
    }
 }
-    public double smallestAmount {
-      double amount = null 
-      for(i > 0; i < data.size(); i++;) {
-        if index[i] > amount{
-          int amount = index[i];
+    public double avgLoan {
+      double amount = 0;
+      for(int i = 0; i < data.size(); i++){
+        amount += data.get(i).getLoanAmount();
+      }
+      amount /= data.size();
+      return amount;
+    }
+      public double largestLoan {
+
+        double amount = data.get(i).getLoanAmount();
+        for(int i = 0; i < data.size(); i++) {
+        if data.get(i).getLoanAmount() > amount{
+          amount =  data.get(i).getLoanAmount(i);
         }
       }
     return amount;    
     }
-    public string smallestLoanCountry
+    public double smallestLoan {
+
+      double amount = data.get(0).getLoanAmount();
+      for(int i = 0; i < data.size(); i++) {
+        if data.get(i).getLoanAmount() < amount{
+          amount =  data.get(i).getLoanAmount(i);
+        }
+      }
+    return amount;    
+    }
+  
+    public string smallestLoanCountry{
+      double amount = data.get(0).getLoanAmount();
+      string country = "";
+        for(int i = 0; i  < data.size(); i++){
+        if data.get(i).getLoanAmount() < amount {
+          country = data.get(i).getCountry
+          amount = data.get(i).getLoanAmount
+        }
+        }
+      return amount;
+      return country;
+    }
+    public string smallestLoanCountry{
+      double amount = data.get(0).getLoanAmount();
+      string country = "";
+        for(int i = 0; i  < data.size(); i++){ 
+          if data.get(i).getLoanAmount() > amount {
+          country = data.get(i).getCountry;
+          amount = data.get(i).getLoanAmount;
+        }
+      }
+    return country;
+    return amount;
+    }
+    public string smallestLoanCountry{
+      double amount = data.get(0).getLoanAmount();
+      string country = "";
+        for(int i = 0; i  < data.size(); i++){ 
+          if data.get(i).getLoanAmount() < amount {
+          country = data.get(i).getCountry
+          amount = data.get(i).getLoanAmount;
+        }
+      }
+    return country;
+    return amount;
+    }
+    public double avgDaysToFund{
+      double avgdays = 0.0;
+      for(int i = 0; i < data.size(); i++);{
+        avgdays += data.get(i).getDaysToFund(i);
+      }
+      avgdays /= data.size()''
+      return avgdays;
+    }
+    
+    public double largestLoanKenya{
+
+      double amount = data.get(i).getCountry().getLoanAmount();
+      for(int i = 0; i < data.size(); i++) {
+      if data.get(i).getCountry(Kenya).getLoanAmount() > amount{
+        amount =  data.get(i).getLoanAmount(i);
+        }
+      }
+      return amount;    
+    }
+
+    public double avgLoanPhillippines {
+      double amount = 0;
+      for(int i = 0; i < data.size(); i++){
+        amount += data.get(i).getCountry(Philippines).getLoanAmount();
+      }
+      amount /= data.size();
+      return amount;
+    }
