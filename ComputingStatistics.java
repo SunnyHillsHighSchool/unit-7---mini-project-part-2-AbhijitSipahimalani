@@ -31,13 +31,12 @@ public class ComputingStatistics {
       }
       return amount;
    }
-}
     public double avgLoan {
-      double amount = 0;
+      double amount = 0.0;
       for(int i = 0; i < data.size(); i++){
         amount += data.get(i).getLoanAmount();
       }
-      amount /= data.size();
+      amount /= (double)data.size();
       return amount;
     }
       public double largestLoan {
@@ -45,7 +44,7 @@ public class ComputingStatistics {
         double amount = data.get(i).getLoanAmount();
         for(int i = 0; i < data.size(); i++) {
         if data.get(i).getLoanAmount() > amount{
-          amount =  data.get(i).getLoanAmount(i);
+          amount =  data.get(i).getLoanAmount();
         }
       }
     return amount;    
@@ -55,27 +54,26 @@ public class ComputingStatistics {
       double amount = data.get(0).getLoanAmount();
       for(int i = 0; i < data.size(); i++) {
         if data.get(i).getLoanAmount() < amount{
-          amount =  data.get(i).getLoanAmount(i);
+          amount =  data.get(i).getLoanAmount();
         }
       }
     return amount;    
     }
   
-    public string smallestLoanCountry{
+    public String smallestLoanCountry{
       double amount = data.get(0).getLoanAmount();
-      string country = "";
+      String country = "";
         for(int i = 0; i  < data.size(); i++){
         if data.get(i).getLoanAmount() < amount {
-          country = data.get(i).getCountry
-          amount = data.get(i).getLoanAmount
+          country = data.get(i).getCountry();
+          amount = data.get(i).getLoanAmount();
         }
         }
-      return amount;
       return country;
     }
-    public string smallestLoanCountry{
+    public String largestLoanCountry{
       double amount = data.get(0).getLoanAmount();
-      string country = "";
+      String country = "";
         for(int i = 0; i  < data.size(); i++){ 
           if data.get(i).getLoanAmount() > amount {
           country = data.get(i).getCountry;
@@ -83,45 +81,35 @@ public class ComputingStatistics {
         }
       }
     return country;
-    return amount;
-    }
-    public string smallestLoanCountry{
-      double amount = data.get(0).getLoanAmount();
-      string country = "";
-        for(int i = 0; i  < data.size(); i++){ 
-          if data.get(i).getLoanAmount() < amount {
-          country = data.get(i).getCountry
-          amount = data.get(i).getLoanAmount;
-        }
-      }
-    return country;
-    return amount;
     }
     public double avgDaysToFund{
       double avgdays = 0.0;
-      for(int i = 0; i < data.size(); i++);{
-        avgdays += data.get(i).getDaysToFund(i);
+      for(int i = 0; i < data.size(); i++){
+        avgdays += data.get(i).getDaysToFund();
       }
-      avgdays /= data.size()''
+      avgdays /= (double)data.size();
       return avgdays;
     }
     
     public double largestLoanKenya{
-
-      double amount = data.get(i).getCountry().getLoanAmount();
-      for(int i = 0; i < data.size(); i++) {
-      if data.get(i).getCountry(Kenya).getLoanAmount() > amount{
-        amount =  data.get(i).getLoanAmount(i);
-        }
+      double amount= 0.0;
+      for(int i = 0; i < data.size(); i++){
+        if (data.get(i).getCountry() == "Kenya")
+          if (data.get(i).getLoanAmount > amount)
+            amount = data.get(i).getLoanAmount();
       }
-      return amount;    
+      return amount;
     }
 
     public double avgLoanPhillippines {
-      double amount = 0;
+      double amount = 0.0;
+      int num = 0;
       for(int i = 0; i < data.size(); i++){
-        amount += data.get(i).getCountry(Philippines).getLoanAmount();
+        if(data.get(i).getCountry() == "Phillippines"){          
+          amount += (double)data.get(i).getLoanAmount();
+          num ++;
+        }
       }
-      amount /= data.size();
-      return amount;
+      return amount / (double)num;
     }
+}
